@@ -213,7 +213,7 @@ exometer_info({exometer_callback, refresh_metric,
                    [Metric, DataPoint]),
              {ok, St};
         [{_, _TRef}] ->
-            ?info("Refreshing metric ~p_~p = ~p~n",
+            ?debug("Refreshing metric ~p_~p = ~p~n",
                   [Metric, DataPoint, Value]),
             {ok, report_exometer_(Metric, DataPoint, Extra, Value, St)}
     end;
